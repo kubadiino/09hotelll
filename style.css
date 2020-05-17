@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "nav nav"
+    "bild bild"
+    "h1 h1"
+    "h2 h2"
+    "slide slide"
+    "buttons buttons"
+    "map map"
+    "section section"
+    "drinks drinks"
+    "bild2 bild2"
+    "s2 s2"
+    "footer footer";
+}
+
+nav {
+  background-color: grey;
+  width: 100%;
+  height: 110px;
+  grid-area: nav;
+}
+
+.logga {
+  grid-area: logga;
+}
+
+.logga img {
+  height: 110px;
+  line-height: 110px;
+  margin-left: 120px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 120px;
+  grid-area: ul;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 110px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+nav ul li a.active {
+  color: yellow;
+}
+
+.bild {
+  width: 100%;
+  height: 500px;
+  grid-area: bild;
+}
+
+.bild img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin: 40px auto 0;
+  grid-area: h1;
+  width: 80%;
+
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  grid-area: h2;
+}
+
+.slideshow {
+  grid-area: slide;
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  height: 300px;
+}
+
+.mySlides {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.buttons {
+  grid-area: buttons;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  background-color: white;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+section {
+  width: 40%;
+  margin: auto;
+  grid-area: section;
+}
+
+section p, .s2 p {
+  color: white;
+  font-size: 20px;
+  line-height: 31px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.bild2 {
+  grid-area: bild2;
+  width: 500px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.bild2 img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.s2 {
+  width: 40%;
+  margin: auto;
+  grid-area: s2;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  padding: 40px;
+  grid-area: footer;
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.coming-ft {
+  background-color: white;
+  text-align: center;
+  padding: 40px;
+  grid-area: footer;
+  margin-top: 900px;
+}
+
+section form {
+  grid-area: form;
+  display: grid;
+  grid-row-gap: 60px;
+  margin: 20px auto;
+}
+
+form .falt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.falt p {
+  font-size: 30px;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  font-size: 27px;
+  width: 200px;
+  border-radius: 99px;
+  margin: auto;
+  height: 50px;
+}
+
+.submit:hover {
+  background-color: green;
+  transition: 0.5s;
+}
+
+input, select {
+  height: 45px;
+  margin-top: 40px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.drinks {
+  grid-area: drinks;
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "d1 d1h"
+    "d1 d1p"
+    "d2 d2h"
+    "d2 d2p"
+    "d3 d3h"
+    "d3 d3p"
+    "d4 d4h"
+    "d4 d4p";
+}
+
+.drinks .d1 {
+  grid-area: d1;
+}
+
+.drinks .d2 {
+  grid-area: d2;
+}
+
+.drinks .d3 {
+  grid-area: d3;
+}
+
+.drinks .d4 {
+  grid-area: d4;
+}
+
+.drinks .d1h {
+  grid-area: d1h;
+}
+
+.drinks .d2h {
+  grid-area: d2h;
+}
+
+.drinks .d3h {
+  grid-area: d3h;
+}
+
+.drinks .d4h {
+  grid-area: d4h;
+}
+
+.drinks .d1p {
+  grid-area: d1p;
+}
+
+.drinks .d2p {
+  grid-area: d2p;
+}
+
+.drinks .d3p {
+  grid-area: d3p;
+}
+
+.drinks .d4p {
+  grid-area: d4p;
+}
+
+.d1, .d2, .d3, .d4 {
+  width: 60%;
+  height: 400px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+.d1h, .d2h, .d3h, .d4h {
+  width: 400px;
+  font-size: 50px;
+  margin: auto;
+}
+
+iframe {
+  grid-area: map;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 20px;
+  width: 40%;
+}
+
+@media (max-width: 1250px) {
+  .logga img {
+    margin-left: 60px;
+  }
+
+  nav ul {
+    margin-right: 60px;
+  }
+
+  nav ul li {
+    margin: 0 7px;
+  }
+
+  input, select {
+    width: 150px;
+  }
+
+
+  section, .s2 {
+    width: 75%;
+  }
+
+  .bild2 {
+    width: 75%;
+  }
+
+  .d1, .d2, .d3, .d4 {
+    width: 75%;
+    height: 400px;
+  }
+  iframe {
+    width: 80%;
+  }
+
+}
+
+@media (max-width: 1050px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "bild"
+      "h1"
+      "h2"
+      "slide"
+      "buttons"
+      "map"
+      "section"
+      "drinks"
+      "bild2"
+      "s2"
+      "footer";
+  }
+
+  nav {
+    height: 220px;
+    text-align: center;
+    margin-right: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logga"
+      "ul";
+  }
+
+  .logga {
+    text-align: center;
+    margin-left: -60px;
+  }
+
+  nav ul {
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .drinks {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "d1"
+      "d1h"
+      "d1p"
+      "d2"
+      "d2h"
+      "d2p"
+      "d3"
+      "d3h"
+      "d3p"
+      "d4"
+      "d4h"
+      "d4p";
+  }
+
+  .d1, .d2, .d3, .d4 {
+    width: 400px;
+  }
+}

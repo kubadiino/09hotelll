@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Orten Hotell</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+
+    <a class="logga" href="index.html">
+      <img src="orten-hotell-logga.png" alt="Orten Hotell">
+    </a>
+
+    <ul>
+      <li><a href="index.html" class="active">Hem</a></li>
+      <li><a href="boka.html">Boka</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="bar.html">Bar</a></li>
+
+    </ul>
+  </nav>
+  <div class="bild">
+    <img src="hotellbild.jpg" alt="Hotellbild">
+  </div>
+  <h1>Välkommen till Orten Hotell bror</h1>
+  <h2>Hotell för alla sorters flyktingar</h2>
+
+  <div class="slideshow">
+    <img class="mySlides" src="hotellbild4.jpg" alt="Bild på hotell">
+    <img class="mySlides" src="hotellbild3.jpg" alt="Bild på hotell">
+    <img class="mySlides" src="hotellbild5.jpg" alt="Bild på hotell">
+  </div>
+
+  <div class="buttons">
+    <button class="prev" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="next" onclick="plusDivs(1)">Next ❯</button>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " w3-red";
+    }
+  </script>
+  <section>
+    <p>Välkommen till vårt hotell där det finns dricka för alla sorters flycktingar. För alla från mexikaner och araber till ryssar mm! Vi har en skön pool på baksidan där alla flycktingar kan smitta covid-19 tillsammans. Vår indian costumer service
+      är top notch och du måste vara beredd på att bli scammad när som helst. I våra butiker kan man köpa tofflor, bälte och piskor att slå barnen med. Känn dig som hemma! <br><br><a href="https://sites.google.com/view/belfrage/home"
+        target="_blank">Lorem</a> ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula tortor eget aliquam pellentesque. Integer ullamcorper libero lacinia lobortis pellentesque. Aenean dictum risus a risus dictum, nec laoreet nibh
+      ultricies. Aliquam purus
+      sapien, iaculis in tellus sit amet, maximus finibus nunc. Donec lobortis feugiat sapien at fringilla. Pellentesque quis imperdiet quam, id porta eros. Praesent at metus pellentesque, bibendum magna quis, rutrum urna. Pellentesque nibh odio,
+      posuere quis orci sed, iaculis fringilla dolor.
+
+      Sed fringilla ut nibh non fringilla. Proin sit amet ultrices odio, a tempor felis. Sed eget lobortis risus. Phasellus gravida pulvinar dui, sit amet dapibus nulla dapibus at. Nullam ultrices odio nisi, a ornare eros ultrices ac. Praesent
+      dictum, lectus eget hendrerit aliquam, eros dolor hendrerit arcu, ut sagittis dolor massa sit amet enim. Nullam vitae ex turpis. Quisque blandit orci quis ipsum ultrices tempor. Morbi commodo, quam nec pulvinar varius, ligula est pulvinar
+      justo, a ullamcorper arcu nisl quis lectus. Nulla varius viverra lacus nec finibus.
+
+      Proin non turpis eleifend, posuere arcu eu, aliquam mi. Mauris fermentum malesuada massa, id molestie mauris posuere et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Aliquam ac
+      nunc condimentum, auctor eros at, vulputate urna. Donec ipsum tellus, laoreet feugiat dictum at, pharetra ut massa. Nunc arcu enim, interdum quis purus vel, tristique convallis purus.</p>
+  </section>
+  <footer>
+    <ul>
+      <li>Kontaktinfo</li>
+      <li>Email: <a href="mailto:ortenhotell@mail.com">ortenhotell@mail.com</a></li>
+      <li>Telefonnummer: 123456789</li>
+    </ul>
+  </footer>
+</body>
+
+</html>
